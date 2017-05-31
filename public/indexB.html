@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="app">
+<head>
+<meta charset="UTF-8" />
+ </head>
+ <body>
+      <div class="row" ng-controller="appController">
+          <h1> FUTBOLISTAS </h1>
+               <ul>
+                  <li ng-repeat="data in datos">
+                      <p>Nombre: {{ data.nombre }} <br /> Apellido: {{ data.apellido }}</p>
+                  </li>
+              </ul>
+       </div>
+       <script type="text/javascript" src="js/angular.js"></script>
+       <script type="text/javascript" src="js/tabla.js"></script>
+ </body>
+</html>

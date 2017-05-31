@@ -1,0 +1,23 @@
+	<ul>
+        <li ng-repeat="todo in todos">
+          <span ng-hide="updateMode">{{todo.titulo}}</span>
+          <form ng-show="updateMode" ng-submit="updateTodo(todo)">
+            <input type="text" placeholder="Actualizalo" ng-model="todo.title" />
+          </form>
+          - <a href='' ng-click="deleteTodo(todo._id)">Eliminar</a> - <a href='' ng-click="updateMode=true" ng-hide="updateMode">Modificar</a> <a href='' ng-click="updateMode=false" ng-show="updateMode">Cancelar</a>
+        </li>
+      </ul>
+
+
+function getLibro(req, res){
+	//let libroId = req.params.libroId
+	let libroX = req.params.libroX
+	/*Book.findById(libroX, (err, libro) => {
+		if(err)
+			return res.status(500).send({message: `error: ${err}`})
+		if (!libro){
+			res.status(404).send({message: `no existe ese id`})
+		}
+		res.status(200).send({ libro })
+	})*/
+//}

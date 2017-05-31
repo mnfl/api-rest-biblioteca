@@ -1,0 +1,27 @@
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body{
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-color: #845984;
+}
+
+h1{
+	font-family: prueba;
+	color: green;
+	text-shadow: 10px 10px 15px rgba(255,255,255,05);
+	font-size: 3em;
+	margin: auto;
+}
+
+div{
+	margin: 10px;
+}
+
+.formulario{
+	padding: auto;
+}

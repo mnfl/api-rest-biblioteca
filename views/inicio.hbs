@@ -1,0 +1,40 @@
+<h1 class="text-center">Consultoria</h1>
+<content class="container">
+	<form id="enviar" method="post">
+		<div class="form-group text-center">
+			<label for="exampleInputEmail1">Ingrese</label>
+		</div>
+		<div class="form-group form-group-lg text-center">
+			<input type="text" name="libro" value="" placeholder="Titulo o Autor" id="libroX">
+		</div> 
+		<div class="form-group text-center">
+			<input type="submit" value="Enviar" class="btn btn-primary">
+		</div>
+	</form>
+</content>
+<div id="container" class="form-group text-center">
+    <table class="table table-bordered">
+        <thead>
+	        <tr>
+	            <th>Titulo</th>
+	            <th>Autor</th>
+	            <th>Clasificacion</th>
+	        </tr>
+        </thead>
+        <!--Handlebar templates start-->
+        <script id="Books" type="text/x-handlebars-template">
+	        <tbody id="Books">
+	        	<tr>
+	        		{{#each libro}}
+		        		<td>{{ titulo }}</td>
+			            <td>{{ this.autor }}</td>
+				        <td>{{ clasificacion }}</td>
+			        {{/each}}
+	            </tr>
+	        </tbody>
+        </script>
+        <!--Handlebar templates end-->
+    </table>
+</div>
+
+<script type="text/javascript" src="js/Action.js"></script>
