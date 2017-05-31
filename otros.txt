@@ -1,0 +1,42 @@
+<ul>
+        <li ng-repeat="todo in todos">
+          <span ng-hide="updateMode">{{todo.titulo}}</span>
+          <form ng-show="updateMode" ng-submit="updateTodo(todo)">
+            <input type="text" placeholder="Actualizalo" ng-model="todo.title" />
+          </form>
+          - <a href='' ng-click="deleteTodo(todo._id)">Eliminar</a> - <a href='' ng-click="updateMode=true" ng-hide="updateMode">Modificar</a> <a href='' ng-click="updateMode=false" ng-show="updateMode">Cancelar</a>
+        </li>
+      </ul>
+
+
+var exec = require("child_process").exec;
+app.get('/', function(req, res){
+	exec("wget -q -O - http://localhost/", 
+		function (error, stdout, stderr) {
+			res.send(stdout)
+		})
+})
+
+
+var i
+            var atributos = Array()
+            if( data.length > 0 ) {
+                for( var aux in data[0] )
+                  atributos.push(aux)
+            }
+
+          let tabla = document.createElement('table')
+          let head = document.createElement('tr')         
+            for( i = 0; i < atributos.length; i++) {
+                head.append('th' + atributos[i] + 'th')
+            }
+            tabla.append('thead').append(head)
+            let tbody = document.createElement('tbody')
+            for(i = 0; i < data.length; i++ ) {
+              console.log(data.length)
+                let tr = document.createElement('tr')
+                for(j = 0; j < atributos.length; j++ )
+                  tr.append('td' + eval('data[i].' + atributos[j]))
+                tbody.append(tr)
+            }
+            tabla.append(tbody)

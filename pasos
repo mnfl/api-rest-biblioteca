@@ -1,0 +1,10 @@
+pasos para crear el proyecto e instalar 
+
+npm init
+
+npm i -S express
+npm i -S body-parser
+npm i -D nodemon
+
+
+npm start
